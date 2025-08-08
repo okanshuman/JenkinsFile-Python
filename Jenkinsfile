@@ -31,6 +31,15 @@ pipeline {
                 '''
             }
         }
+
+        stage('Run App') {
+            steps {
+                sh '''
+                    . $VENV_DIR/bin/activate
+                    python app.py
+                '''
+            }
+        }
     }
 
     post {

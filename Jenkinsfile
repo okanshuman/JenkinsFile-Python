@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('Cleanup') {
+        stage('updated_Cleanup') {
             steps {
                 echo 'Cleaning up old files if any...'
                 sh 'rm -rf $REPO_NAME $VENV_DIR'
